@@ -1,0 +1,1 @@
+﻿###  Changing the maximum number of intervals from 100 to 2000 the error drops from order of 0.01 to 10 e-6 and the execution time barely changes because with 100 intervals the  job schedule overhead remains the same as 2000 intervals and the vector optimization requires a bigger number of intervals to be at its full capability
