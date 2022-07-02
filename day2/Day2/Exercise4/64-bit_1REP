@@ -1,0 +1,18 @@
+
+=============================
+fastermath test and benchmark
+=============================
+ARCH=      64bit-fpu-gcc-modern
+CPPFLAGS=  
+DEFS=      -I../include -I. -D_FM_INTERNAL -D_FM_ALIGN=16
+ARCHFLAGS= -march=native -mfpmath=sse -mpc64 -g
+GENFLAGS=  -falign-functions=16 -fPIC -fno-builtin
+OPTFLAGS=  -O3 -ffast-math -fexpensive-optimizations
+WARNFLAGS= -Wall -W
+LDLIBS=    
+TESTLIBS=  -lrt -lm
+
+time/set for 100 x-values :     0.06us
+<x>: 5.16728    <x**2> - <x>**2: 4.51614693465472
+time for             invsqrt():   0.0117us  numreps 1000
+time for             Q_rsqrt():   0.0066us  avgerr  0.000822579
